@@ -63,25 +63,18 @@ Press q to exit.
 
 Make sure your webcam is active and your hand is 30–60 cm away from the camera in a well-lit environment.
 
-📂 Project Structure
-bash
-Copy
-Edit
+## 📁 Project Structure
+
 ├── mousee.py           # Main gesture detection and control logic
 ├── utility.py          # Angle computation functions
 ├── requirements.txt    # Project dependencies
 ├── README.md           # Project documentation
 └── screenshots/        # (Optional) Captured screenshots
-📸 Demonstration
-Add labeled gesture screenshots or GIF demos here:
 
-🖱️ Cursor Movement
+## 📸 Demonstration
 
-👆 Left Click
-
-🔍 Zoom In/Out
-
-🔃 Scroll
-
-📸 Screenshot Capture
-
+- 🖱️ **Cursor Movement** – ![cursor](screenshots/cursor.png)
+- 👆 **Left Click** – ![left_click](screenshots/left_click.png)
+- 🔍 **Zoom In/Out** – ![zoom](screenshots/zoom.png)
+- 🔃 **Scroll** – ![scroll](screenshots/scroll.png)
+- 📸 **Screenshot** – ![screenshot](screenshots/screenshot.png)
