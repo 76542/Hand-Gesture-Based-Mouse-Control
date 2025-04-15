@@ -1,23 +1,41 @@
-# Hand-Gesture-Based-Mouse-Control
+# 🖐️ Hand Gesture-Based Mouse Control
 
-This project is a hand gesture recognition system that allows users to control the mouse using hand gestures detected through a webcam. The system uses **Mediapipe**, **OpenCV**, and **PyAutoGUI** to automate mouse movements, clicks, and perform actions like screenshots based on hand gestures.
+A real-time computer vision system that allows users to control the mouse cursor and perform common mouse actions using hand gestures detected through a standard webcam. This project uses **MediaPipe**, **OpenCV**, and **PyAutoGUI** to enable contactless, gesture-driven interaction.
 
-## Features
-- **Mouse Movement**: Move the mouse cursor by simply moving your hand in front of the camera.
-- **Left Click**: Make a left-click gesture by bending your index finger and extending your middle finger.
-- **Right Click**: Perform a right-click gesture by bending your middle finger and extending your index finger.
-- **Double Click**: Perform a double-click gesture by extending both your index and middle fingers.
-- **Screenshot**: Take a screenshot by making a fist gesture (all fingers bent).
+---
 
-## Requirements
-- Python 3.x
-- OpenCV
-- Mediapipe
-- PyAutoGUI
-- Pynput
-- Numpy
+## ✨ Features
 
-Install the required libraries using pip:
+| **Gesture**        | **Functionality**                                                   |
+|--------------------|----------------------------------------------------------------------|
+| 🖱️ **Cursor Movement** | Move the mouse using the index fingertip (thumb bent = active control) |
+| 👆 **Left Click**        | Bend the index finger, extend middle & thumb to left-click         |
+| 👉 **Right Click**       | Bend the middle finger, extend index & thumb to right-click        |
+| 👇 **Double Click**      | Bend both index and middle fingers simultaneously                  |
+| 🔃 **Scroll**            | Bend middle and ring fingers; move hand up/down to scroll vertically |
+| 🔍 **Zoom**              | Perform a pinch gesture (index-thumb), and adjust distance to zoom in/out |
+| 📸 **Screenshot**        | All fingers bent, thumb extended — captures screenshot (with cooldown) |
+
+Each gesture is angle-based and robust to lighting variations, with real-time on-screen feedback and smooth interaction.
+
+---
+
+## 🧠 How It Works
+
+- Uses **MediaPipe** to track 21 hand landmarks.
+- Calculates **joint angles** using a custom geometric approach.
+- Classifies gestures with a **rule-based engine** (no ML model required).
+- Executes system-level actions using **pyautogui** and **pynput**.
+- Built-in **gesture prioritization** and **cooldown logic** avoid conflicts.
+
+---
+
+## 🖥️ Requirements
+
+- Python 3.9+
+- Webcam (720p or better recommended)
+
+### Install Dependencies:
 
 ```bash
 pip install opencv-python mediapipe pyautogui pynput numpy
